@@ -14,16 +14,23 @@ const validUsers = [
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const fadeTimer = setTimeout(() => {
+      setIsFadingOut(true);
+    }, 2000);
+    const removeTimer = setTimeout(() => {
       setShowSplash(false);
-    }, 2500);
-    return () => clearTimeout(timer);
+    }, 2800);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
   }, []);
 
   const handleLogin = (e: React.FormEvent) => {
@@ -43,9 +50,9 @@ export default function Home() {
 
   if (showSplash) {
     return (
-      <div className="flex items-center justify-center min-h-screen animated-marine-bg absolute inset-0 z-50 animate-fade-out" style={{ animationDelay: '1.8s' }}>
-          <div className="relative w-72 h-40">
-            <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain drop-shadow-2xl" />
+      <div className={`flex items-center justify-center min-h-screen bg-white absolute inset-0 z-50 transition-opacity duration-700 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+          <div className="relative w-11/12 max-w-3xl h-64 md:h-96 animate-fade-in">
+            <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain" priority />
           </div>
       </div>
     );
@@ -53,7 +60,7 @@ export default function Home() {
 
   return (
     <div className="flex items-center justify-center min-h-screen animated-marine-bg p-4 relative overflow-hidden">
-      <div className="glass-panel w-full max-w-md p-10 text-center animate-fade-in relative z-10">
+      <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-10 text-center animate-fade-in relative z-10 border border-gray-100">
         
         {/* Logo and App Name */}
         <div className="flex flex-col items-center justify-center mb-8">
