@@ -25,12 +25,37 @@ export const products = [
 export const podcasts = [
   {
     id: 1,
-    title: 'Finding Inner Peace',
-    videoId: 'kJQP7kiw5Fk'
+    title: 'Relaxation Session 1',
+    videoId: '_QYtH54fNSo'
   },
   {
     id: 2,
-    title: 'The Sound of the Ocean',
-    videoId: 'bn9F19Hi1Lk'
+    title: 'Relaxation Session 2',
+    videoId: 'rXRRf3Rh3C8'
+  },
+  {
+    id: 3,
+    title: 'Relaxation Session 3',
+    videoId: 'rMtA2gNJc00'
+  },
+  {
+    id: 4,
+    title: 'Relaxation Session 4',
+    videoId: 'Olu3CZwLqVg'
   }
+];
+
+export const masterYourTriggers = [
+  { id: 1, title: 'Master Your Triggers - Part 1', videoId: 'rOFHRKj-yz0' },
+  { id: 2, title: 'Master Your Triggers - Part 2', videoId: 'W7AsmJM0gec' },
+  { id: 3, title: 'Master Your Triggers - Part 3', videoId: '-y29Vf86cA8' },
+  { id: 4, title: 'Master Your Triggers - Part 4', videoId: '32HHKFy02lM' },
+  { id: 5, title: 'Master Your Triggers - Part 5', videoId: 'gl5w3amkhPI' },
+  { id: 6, title: 'Master Your Triggers - Part 6', videoId: '-ZkMsv8EtR4' },
+  { id: 7, title: 'Master Your Triggers - Part 7', videoId: 'QMd23Hgtn_w' },
+  { id: 8, title: 'Master Your Triggers - Part 8', videoId: 'KsVWnuz61WU' },
+  { id: 9, title: 'Master Your Triggers - Part 9', videoId: 'DPbPzNkcZ20' },
+  { id: 10, title: 'Master Your Triggers - Part 10', videoId: 'fFRGIlT5XqQ' },
+  { id: 11, title: 'Master Your Triggers - Part 11', videoId: 'V36ILwYfO-I' },
+  { id: 12, title: 'Master Your Triggers - Part 12', videoId: 'TwBqcqCvPfQ' }
 ];

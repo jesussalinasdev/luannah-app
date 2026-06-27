@@ -14,10 +14,6 @@ export default function CartView() {
     const storedCart = JSON.parse(localStorage.getItem('dummy_cart') || '[]');
     let items = products.filter(p => storedCart.includes(p.id));
     
-    // Auto-populate for demo if empty
-    if (items.length === 0) {
-      items = [products[0]];
-    }
     setCartItems(items);
   }, []);
 
@@ -40,8 +36,8 @@ export default function CartView() {
       {checkoutSuccess ? (
         <div className="glass-panel p-12 text-center flex flex-col items-center">
           <div className="text-6xl mb-6">✨</div>
-          <h3 className="text-2xl font-bold text-gray-800">Thank you for your order!</h3>
-          <p className="text-gray-500 mt-2">Your serenity items are on their way.</p>
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">Thank you for your purchase!</h3>
+          <p className="text-gray-500 mt-2">We will be sending a confirmation email shortly.</p>
         </div>
       ) : cartItems.length === 0 ? (
         <div className="glass-panel p-12 text-center flex flex-col items-center">

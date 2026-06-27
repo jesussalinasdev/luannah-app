@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { Home, Headphones, ShoppingBag, ShoppingCart, Menu, LogOut, User } from "lucide-react";
+import { Home, Headphones, Brain, ShoppingBag, ShoppingCart, Menu, LogOut, User } from "lucide-react";
 import Link from "next/link";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -18,6 +18,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const navItems = [
     { name: "Home", path: "/dashboard", icon: Home },
     { name: "Podcast", path: "/dashboard/podcast", icon: Headphones },
+    { name: "Triggers", path: "/dashboard/master-your-triggers", icon: Brain },
     { name: "Shop", path: "/dashboard/shop", icon: ShoppingBag },
     { name: "Cart", path: "/dashboard/cart", icon: ShoppingCart },
   ];

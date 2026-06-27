@@ -5,7 +5,7 @@ export default function PodcastView() {
     <div className="animate-fade-in">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200">Podcasts & Videos</h2>
       
-      <div className="flex flex-col gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {podcasts.map((podcast) => (
           <div key={podcast.id} className="glass-panel overflow-hidden">
             <div className="relative pb-[56.25%] h-0">
