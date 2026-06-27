@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ShopView() {
   return (
-    <div className="animate-fade-in">
+    <div className="pb-4 relative z-10">
       <h2 className="text-2xl font-bold text-[var(--color-accent-plum)] mb-6 pb-4 border-b border-gray-200">Soulspectives Offerings</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
