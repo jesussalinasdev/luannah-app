@@ -39,7 +39,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="fixed inset-0 bg-white/95 backdrop-blur-xl z-50 flex flex-col justify-center items-center animate-fade-in">
           <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-4xl text-gray-400 font-light">&times;</button>
           <div className="flex flex-col gap-8 text-2xl text-gray-700">
-            <button onClick={() => setMenuOpen(false)} className="flex items-center gap-4"><User /> My Profile</button>
+            <Link href="/dashboard/profile" onClick={() => setMenuOpen(false)} className="flex items-center gap-4 hover:text-[var(--color-accent-blue)] transition-colors"><User /> My Profile</Link>
             <button onClick={handleLogout} className="flex items-center gap-4 text-red-500"><LogOut /> Log Out</button>
           </div>
         </div>
@@ -62,7 +62,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             );
           })}
         </div>
-        <div className="p-4 mb-4">
+        <div className="p-4 mb-2 flex flex-col gap-2">
+          <Link href="/dashboard/profile" className="flex items-center gap-4 p-4 w-full text-gray-500 hover:bg-[var(--color-accent-teal)]/10 hover:text-[var(--color-accent-teal)] rounded-xl transition-colors">
+            <User size={24} />
+            <span>My Profile</span>
+          </Link>
           <button onClick={handleLogout} className="flex items-center gap-4 p-4 w-full text-gray-500 hover:bg-red-50 hover:text-red-500 rounded-xl transition-colors">
             <LogOut size={24} />
             <span>Log Out</span>
