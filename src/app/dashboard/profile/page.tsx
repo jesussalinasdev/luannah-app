@@ -34,7 +34,7 @@ export default function ProfileView() {
 
   return (
     <div className="animate-fade-in max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200">My Profile</h2>
+      <h2 className="text-2xl font-bold text-[var(--color-accent-plum)] mb-6 pb-4 border-b border-gray-200">My Profile</h2>
       
       <div className="glass-panel p-8">
         
@@ -43,7 +43,7 @@ export default function ProfileView() {
           <div className="w-24 h-24 bg-gradient-to-tr from-[var(--color-accent-pink)] to-[var(--color-accent-plum)] rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
             <User size={48} />
           </div>
-          <h3 className="text-2xl font-semibold text-gray-800">
+          <h3 className="text-2xl font-semibold text-[var(--color-accent-plum)]">
             {isEditing ? (
               <input 
                 type="text" 
@@ -76,13 +76,13 @@ export default function ProfileView() {
 
         {/* Dummy Data Section */}
         <div className="space-y-4 border-t border-gray-200 pt-6">
-          <h4 className="text-lg font-medium text-gray-800 mb-4">Account Details</h4>
+          <h4 className="text-lg font-medium text-[var(--color-accent-plum)] mb-4">Account Details</h4>
           
           <div className="flex items-center justify-between p-4 bg-white/50 rounded-xl border border-gray-100">
             <div className="flex items-center gap-4">
               <Shield className="text-[var(--color-accent-pink)]" />
               <div>
-                <p className="font-medium text-gray-800">Subscription Status</p>
+                <p className="font-medium text-[var(--color-accent-plum)]">Subscription Status</p>
                 <p className="text-sm text-gray-500">{status}</p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function ProfileView() {
             <div className="flex items-center gap-4">
               <User className="text-[var(--color-accent-plum)]" />
               <div>
-                <p className="font-medium text-gray-800">Member Since</p>
+                <p className="font-medium text-[var(--color-accent-plum)]">Member Since</p>
                 <p className="text-sm text-gray-500">{memberSince}</p>
               </div>
             </div>

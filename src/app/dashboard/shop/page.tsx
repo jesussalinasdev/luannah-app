@@ -23,7 +23,7 @@ export default function ShopView() {
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200">Serenity Shop</h2>
+      <h2 className="text-2xl font-bold text-[var(--color-accent-plum)] mb-6 pb-4 border-b border-gray-200">Serenity Shop</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
@@ -37,7 +37,7 @@ export default function ShopView() {
               />
             </div>
             <div className="p-6 flex flex-col flex-1">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
+              <h3 className="text-xl font-semibold text-[var(--color-accent-plum)] mb-2">{product.title}</h3>
               {product.description && (
                 <p className="text-gray-500 text-sm mb-4 line-clamp-3 leading-relaxed">{product.description}</p>
               )}

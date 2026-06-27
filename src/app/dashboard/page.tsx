@@ -14,7 +14,7 @@ export default function HomeView() {
             className="object-cover" 
           />
         </div>
-        <h2 className="text-3xl font-bold text-gray-800 tracking-wide">Luannah Arana</h2>
+        <h2 className="text-3xl font-bold text-[var(--color-accent-plum)] tracking-wide">Luannah Arana</h2>
         <p className="text-[var(--color-accent-plum)] font-semibold mt-1 tracking-widest uppercase text-sm">Founder</p>
         <p className="text-gray-500 mt-3">Welcome to Soulspectives Institute.</p>
       </div>
@@ -30,11 +30,11 @@ export default function HomeView() {
       {/* Quick Actions */}
       <div className="grid grid-cols-2 gap-4">
         <Link href="/dashboard/podcast" className="glass-panel p-6 text-center hover:bg-white/90 transition-colors group">
-          <h4 className="font-bold text-gray-800 mb-1 group-hover:text-[var(--color-accent-plum)]">Latest Podcast</h4>
+          <h4 className="font-bold text-[var(--color-accent-plum)] mb-1 group-hover:text-[var(--color-accent-plum)]">Latest Podcast</h4>
           <p className="text-sm text-gray-500">Listen Now</p>
         </Link>
         <Link href="/dashboard/shop" className="glass-panel p-6 text-center hover:bg-white/90 transition-colors group">
-          <h4 className="font-bold text-gray-800 mb-1 group-hover:text-[var(--color-accent-plum)]">New Arrivals</h4>
+          <h4 className="font-bold text-[var(--color-accent-plum)] mb-1 group-hover:text-[var(--color-accent-plum)]">New Arrivals</h4>
           <p className="text-sm text-gray-500">Shop Now</p>
         </Link>
       </div>

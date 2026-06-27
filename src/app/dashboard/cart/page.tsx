@@ -38,12 +38,12 @@ export default function CartView() {
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200">Your Cart</h2>
+      <h2 className="text-2xl font-bold text-[var(--color-accent-plum)] mb-6 pb-4 border-b border-gray-200">Your Cart</h2>
       
       {checkoutSuccess ? (
         <div className="glass-panel p-12 text-center flex flex-col items-center">
           <div className="text-6xl mb-6">✨</div>
-          <h3 className="text-2xl font-bold text-gray-800 mb-2">Thank you for your purchase!</h3>
+          <h3 className="text-2xl font-bold text-[var(--color-accent-plum)] mb-2">Thank you for your purchase!</h3>
           <p className="text-gray-500 mt-2">We will be sending a confirmation email shortly.</p>
         </div>
       ) : cartItems.length === 0 ? (
@@ -59,7 +59,7 @@ export default function CartView() {
                 <Image src={item.image} alt={item.title} fill className="object-cover" />
               </div>
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-800">{item.title}</h4>
+                <h4 className="font-semibold text-[var(--color-accent-plum)]">{item.title}</h4>
                 <p className="text-sm text-gray-500">Qty: 1</p>
               </div>
               <div className="font-bold text-[var(--color-accent-plum)]">{item.price}</div>
@@ -74,7 +74,7 @@ export default function CartView() {
           ))}
           
           <div className="mt-8 pt-6 border-t border-dashed border-gray-200">
-            <div className="flex justify-between items-center mb-6 text-xl font-bold text-gray-800">
+            <div className="flex justify-between items-center mb-6 text-xl font-bold text-[var(--color-accent-plum)]">
               <span>Total</span>
               <span className="text-[var(--color-accent-plum)]">${total.toFixed(2)}</span>
             </div>

@@ -3,7 +3,7 @@ import { podcasts } from "@/lib/data";
 export default function PodcastView() {
   return (
     <div className="animate-fade-in">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200">Podcasts & Videos</h2>
+      <h2 className="text-2xl font-bold text-[var(--color-accent-plum)] mb-6 pb-4 border-b border-gray-200">Podcasts & Videos</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {podcasts.map((podcast) => (
@@ -18,7 +18,7 @@ export default function PodcastView() {
               ></iframe>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-800">{podcast.title}</h3>
+              <h3 className="text-xl font-semibold text-[var(--color-accent-plum)]">{podcast.title}</h3>
             </div>
           </div>
         ))}
