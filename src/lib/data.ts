@@ -9,9 +9,10 @@ export const products = [
   },
   {
     id: 2,
-    title: 'Ocean Breeze Candle',
-    price: '$35.00',
-    image: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=400',
+    title: 'The Power And Possibility Of You',
+    description: 'A transformative collection of writings designed to guide you on a journey of self-discovery, healing, and personal empowerment.',
+    price: '$9.99',
+    image: '/book-2.jpg',
     link: '#'
   },
   {
