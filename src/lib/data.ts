@@ -37,11 +37,11 @@ export const products = [
   },
   {
     id: 5,
-    title: 'Master Your Triggers (Online Course)',
-    description: 'It is time to come home to your whole self. Book your free discovery call today to learn more about our comprehensive online course.',
+    title: 'Free Discovery Call with Luannah',
+    description: 'It is time to come home to your whole self. Book your 30-minute free discovery call today to start your journey.',
     price: 'Consultation',
     buttonLabel: 'Book Free Call',
-    image: '/course.png',
+    image: '/discovery-call.png',
     url: 'https://thehub-api.mastermind.com/widget/bookings/1on1-consultation-24-fc758c2e-99d8-4046-83db-08d27f19479c-b371faa8-67b2-4a53-9e94-fb484d38be9a'
   }
 ];
