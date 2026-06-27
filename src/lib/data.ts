@@ -1,19 +1,48 @@
 export const products = [
   {
     id: 1,
-    title: 'Resilience, Grace and the Art of Showing Up',
-    description: 'An inspiring story of courage, overcoming trauma, and discovering inner resilience to rebuild self-esteem and live your deepest dreams.',
-    price: '$24.98',
-    image: '/book-1.jpg',
-    link: '#'
+    title: 'The Soul Renewal Bundle',
+    description: 'A transformative collection to guide you on a journey of self-discovery, healing, and personal empowerment.',
+    price: '$37.00',
+    buttonLabel: 'Get the Bundle',
+    image: '/bundle.png',
+    url: 'https://soul.luannahvictoriaarana.info/opt-in-page-5202'
   },
   {
     id: 2,
-    title: 'The Power And Possibility Of You',
-    description: 'A transformative collection of writings designed to guide you on a journey of self-discovery, healing, and personal empowerment.',
-    price: '$9.99',
-    image: '/book-2.jpg',
-    link: '#'
+    title: 'Come Alive! (Free Book)',
+    description: 'Download your free copy today and start your journey towards profound healing and self-discovery.',
+    price: 'Free',
+    buttonLabel: 'Get Free Book',
+    image: '/free-book.jpg',
+    url: 'https://luannahvictoriaarana.info/opt-in-page'
+  },
+  {
+    id: 3,
+    title: 'Chakra Radiance Crystal Singing Bowl',
+    description: 'A deeply relaxing sound healing album designed to balance your chakras and restore inner peace.',
+    price: 'Apple Music',
+    buttonLabel: 'Listen Now',
+    image: '/apple-music.svg',
+    url: 'https://music.apple.com/ca/artist/luella/1459216930'
+  },
+  {
+    id: 4,
+    title: 'Reunited: The Journey Home',
+    description: 'Immerse yourself in this sound healing album to reconnect with your soul and find your center.',
+    price: 'Apple Music',
+    buttonLabel: 'Listen Now',
+    image: '/apple-music.svg',
+    url: 'https://music.apple.com/ca/album/reunited-the-journey-home/1459217841'
+  },
+  {
+    id: 5,
+    title: 'Master Your Triggers (Online Course)',
+    description: 'It is time to come home to your whole self. Book your free discovery call today to learn more about our comprehensive online course.',
+    price: 'Consultation',
+    buttonLabel: 'Book Free Call',
+    image: '/book-1.jpg',
+    url: 'https://thehub-api.mastermind.com/widget/bookings/1on1-consultation-24-fc758c2e-99d8-4046-83db-08d27f19479c-b371faa8-67b2-4a53-9e94-fb484d38be9a'
   }
 ];
 
