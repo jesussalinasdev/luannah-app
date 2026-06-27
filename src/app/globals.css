@@ -43,9 +43,9 @@
 }
 
 .animated-marine-bg {
-  background: linear-gradient(-45deg, #2dd4bf, #a5f3fc, #38bdf8, #818cf8);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
+  background: linear-gradient(-45deg, #2dd4bf, #67e8f9, #3b82f6, #6366f1);
+  background-size: 600% 600%;
+  animation: gradientMove 8s ease-in-out infinite;
 }
 
 @keyframes fadeIn {
