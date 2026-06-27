@@ -34,8 +34,8 @@ export default function HomeView() {
           <p className="text-sm text-gray-500">Listen Now</p>
         </Link>
         <Link href="/dashboard/shop" className="glass-panel p-6 text-center hover:bg-white/90 transition-colors group">
-          <h4 className="font-bold text-[var(--color-accent-plum)] mb-1 group-hover:text-[var(--color-accent-plum)]">New Arrivals</h4>
-          <p className="text-sm text-gray-500">Shop Now</p>
+          <h4 className="font-bold text-[var(--color-accent-plum)] mb-1 group-hover:text-[var(--color-accent-plum)]">My Offerings</h4>
+          <p className="text-[var(--color-text-light)] text-sm">Explore</p>
         </Link>
       </div>
     </div>
