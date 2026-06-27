@@ -26,7 +26,10 @@
   }
   
   .btn-primary {
-    @apply w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[var(--color-accent-teal)] to-[var(--color-accent-blue)] text-white font-bold text-lg transition-transform hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-teal-500/30;
+    @apply w-full py-4 px-6 rounded-2xl text-white font-bold text-lg transition-transform hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-teal-500/30;
+    background: linear-gradient(-45deg, #2dd4bf, #67e8f9, #3b82f6, #6366f1);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease-in-out infinite;
   }
   
   .input-field {
