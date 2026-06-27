@@ -40,7 +40,7 @@ export default function ProfileView() {
         
         {/* Avatar Section */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-24 h-24 bg-gradient-to-tr from-[var(--color-accent-teal)] to-[var(--color-accent-blue)] rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
+          <div className="w-24 h-24 bg-gradient-to-tr from-[var(--color-accent-pink)] to-[var(--color-accent-plum)] rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
             <User size={48} />
           </div>
           <h3 className="text-2xl font-semibold text-gray-800">
@@ -49,7 +49,7 @@ export default function ProfileView() {
                 type="text" 
                 value={name} 
                 onChange={(e) => setName(e.target.value)}
-                className="text-center border-b-2 border-[var(--color-accent-blue)] bg-transparent focus:outline-none"
+                className="text-center border-b-2 border-[var(--color-accent-plum)] bg-transparent focus:outline-none"
                 autoFocus
               />
             ) : (
@@ -80,7 +80,7 @@ export default function ProfileView() {
           
           <div className="flex items-center justify-between p-4 bg-white/50 rounded-xl border border-gray-100">
             <div className="flex items-center gap-4">
-              <Shield className="text-[var(--color-accent-teal)]" />
+              <Shield className="text-[var(--color-accent-pink)]" />
               <div>
                 <p className="font-medium text-gray-800">Subscription Status</p>
                 <p className="text-sm text-gray-500">{status}</p>
@@ -91,7 +91,7 @@ export default function ProfileView() {
 
           <div className="flex items-center justify-between p-4 bg-white/50 rounded-xl border border-gray-100">
             <div className="flex items-center gap-4">
-              <User className="text-[var(--color-accent-blue)]" />
+              <User className="text-[var(--color-accent-plum)]" />
               <div>
                 <p className="font-medium text-gray-800">Member Since</p>
                 <p className="text-sm text-gray-500">{memberSince}</p>

@@ -62,7 +62,7 @@ export default function CartView() {
                 <h4 className="font-semibold text-gray-800">{item.title}</h4>
                 <p className="text-sm text-gray-500">Qty: 1</p>
               </div>
-              <div className="font-bold text-[var(--color-accent-blue)]">{item.price}</div>
+              <div className="font-bold text-[var(--color-accent-plum)]">{item.price}</div>
               <button 
                 onClick={() => handleRemoveItem(item.id)}
                 className="p-2 ml-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all"
@@ -76,7 +76,7 @@ export default function CartView() {
           <div className="mt-8 pt-6 border-t border-dashed border-gray-200">
             <div className="flex justify-between items-center mb-6 text-xl font-bold text-gray-800">
               <span>Total</span>
-              <span className="text-[var(--color-accent-blue)]">${total.toFixed(2)}</span>
+              <span className="text-[var(--color-accent-plum)]">${total.toFixed(2)}</span>
             </div>
             
             <button 
