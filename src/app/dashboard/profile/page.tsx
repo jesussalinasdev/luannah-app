@@ -1,17 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { User, Mail, Shield, CheckCircle } from "lucide-react";
 
 export default function ProfileView() {
-  const [name, setName] = useState("Jane Doe");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [memberSince, setMemberSince] = useState("");
+  const [status, setStatus] = useState("");
   const [isEditing, setIsEditing] = useState(false);
-  
-  const email = "jane.doe@example.com";
+
+  useEffect(() => {
+    const userJson = localStorage.getItem("user");
+    if (userJson) {
+      const user = JSON.parse(userJson);
+      setName(user.name || "Jane Doe");
+      setEmail(user.email || "jane.doe@example.com");
+      setMemberSince(user.memberSince || "August 2024");
+      setStatus(user.status || "Premium Serenity Member");
+    }
+  }, []);
 
   const handleSave = () => {
     setIsEditing(false);
-    // Here we would normally save to the backend
+    // Here we would normally save to the backend, but we'll just update localStorage for the demo
+    const userJson = localStorage.getItem("user");
+    if (userJson) {
+      const user = JSON.parse(userJson);
+      user.name = name;
+      localStorage.setItem("user", JSON.stringify(user));
+    }
   };
 
   return (
@@ -65,7 +83,7 @@ export default function ProfileView() {
               <Shield className="text-[var(--color-accent-teal)]" />
               <div>
                 <p className="font-medium text-gray-800">Subscription Status</p>
-                <p className="text-sm text-gray-500">Premium Serenity Member</p>
+                <p className="text-sm text-gray-500">{status}</p>
               </div>
             </div>
             <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Active</span>
@@ -76,7 +94,7 @@ export default function ProfileView() {
               <User className="text-[var(--color-accent-blue)]" />
               <div>
                 <p className="font-medium text-gray-800">Member Since</p>
-                <p className="text-sm text-gray-500">August 2024</p>
+                <p className="text-sm text-gray-500">{memberSince}</p>
               </div>
             </div>
           </div>

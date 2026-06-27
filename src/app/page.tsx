@@ -7,9 +7,9 @@ import logoImg from "../../public/logo.png";
 
 // Mock Data
 const validUsers = [
-  { email: "aloha@luannaharana.ca", password: "12345" },
-  { email: "maria.gonzalez@gmail.com", password: "12345" },
-  { email: "carlos.ramirez@gmail.com", password: "12345" }
+  { email: "aloha@luannaharana.ca", password: "12345", name: "Luannah Arana", memberSince: "August 2022", status: "Premium Serenity Member" },
+  { email: "isabella.montes@gmail.com", password: "12345", name: "Isabella Montes", memberSince: "March 2023", status: "Basic Member" },
+  { email: "sofia.castillo@gmail.com", password: "12345", name: "Sofia Castillo", memberSince: "November 2021", status: "Premium Serenity Member" }
 ];
 
 export default function Home() {
@@ -30,10 +30,11 @@ export default function Home() {
     e.preventDefault();
     setError("");
 
-    const isValid = validUsers.some(u => u.email === email && u.password === password);
-    if (isValid) {
-      // Set auth state (mock)
+    const user = validUsers.find(u => u.email === email && u.password === password);
+    if (user) {
+      // Set auth state
       localStorage.setItem("isAuth", "true");
+      localStorage.setItem("user", JSON.stringify(user));
       router.push("/dashboard");
     } else {
       setError("Invalid email or password.");
