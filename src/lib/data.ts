@@ -14,14 +14,6 @@ export const products = [
     price: '$9.99',
     image: '/book-2.jpg',
     link: '#'
-  },
-  {
-    id: 3,
-    title: 'Mindfulness Guide',
-    price: '$18.00',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400',
-    link: '#'
-  }
 ];
 
 export const podcasts = [
