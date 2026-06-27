@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { products } from "@/lib/data";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, Trash2 } from "lucide-react";
 import Image from "next/image";
 
 export default function CartView() {
@@ -25,6 +25,13 @@ export default function CartView() {
       localStorage.removeItem('dummy_cart');
       setCartItems([]);
     }, 2000);
+  };
+
+  const handleRemoveItem = (idToRemove: number) => {
+    const updatedCart = cartItems.filter(item => item.id !== idToRemove);
+    setCartItems(updatedCart);
+    const updatedCartIds = updatedCart.map(item => item.id);
+    localStorage.setItem('dummy_cart', JSON.stringify(updatedCartIds));
   };
 
   const total = cartItems.reduce((acc, item) => acc + parseFloat(item.price.replace('$', '')), 0);
@@ -56,6 +63,13 @@ export default function CartView() {
                 <p className="text-sm text-gray-500">Qty: 1</p>
               </div>
               <div className="font-bold text-[var(--color-accent-blue)]">{item.price}</div>
+              <button 
+                onClick={() => handleRemoveItem(item.id)}
+                className="p-2 ml-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all"
+                title="Remove item"
+              >
+                <Trash2 size={18} />
+              </button>
             </div>
           ))}
           
