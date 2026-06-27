@@ -7,9 +7,9 @@ import logoImg from "../../public/logo.png";
 
 // Mock Data
 const validUsers = [
-  { email: "aloha@luannaharana.ca", password: "12345", name: "Luannah Arana", memberSince: "August 2022", status: "Premium Serenity Member" },
-  { email: "isabella.montes@gmail.com", password: "12345", name: "Isabella Montes", memberSince: "March 2023", status: "Basic Member" },
-  { email: "sofia.castillo@gmail.com", password: "12345", name: "Sofia Castillo", memberSince: "November 2021", status: "Premium Serenity Member" }
+  { email: "aloha@luannaharana.ca", password: "12345", name: "Luannah Arana", memberSince: "August 2023", status: "Premium Serenity Member" },
+  { email: "emily.chen@gmail.com", password: "12345", name: "Emily Chen", memberSince: "May 2023", status: "Basic Member" },
+  { email: "sarah.thompson@gmail.com", password: "12345", name: "Sarah Thompson", memberSince: "January 2024", status: "Premium Serenity Member" }
 ];
 
 export default function Home() {
