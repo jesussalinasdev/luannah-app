@@ -59,7 +59,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen animated-marine-bg p-4 relative overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen animated-marine-bg p-4 relative overflow-hidden animate-fade-in" style={{ animationDuration: '1s' }}>
       <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-10 text-center animate-fade-in relative z-10 border border-gray-100">
         
         {/* Logo and App Name */}
