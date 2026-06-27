@@ -63,8 +63,8 @@ export default function Home() {
       <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-10 text-center animate-fade-in relative z-10 border border-gray-100">
         
         {/* Logo and App Name */}
-        <div className="flex flex-col items-center justify-center mb-8">
-          <div className="w-64 h-32 relative mb-2">
+        <div className="flex flex-col items-center justify-center mb-6">
+          <div className="w-72 h-36 relative mb-2">
             <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain" />
           </div>
         </div>
