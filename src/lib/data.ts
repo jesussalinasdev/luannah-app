@@ -24,7 +24,7 @@ export const products = [
     price: 'Apple Music',
     buttonLabel: 'Listen Now',
     image: '/chakra-album.png',
-    url: 'https://music.apple.com/ca/artist/luella/1459216930'
+    url: 'https://music.apple.com/ca/album/chakra-radiance/1684433245'
   },
   {
     id: 4,
