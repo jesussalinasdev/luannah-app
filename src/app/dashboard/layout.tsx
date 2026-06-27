@@ -29,9 +29,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       
       {/* Mobile Header */}
       <div className="md:hidden flex justify-between items-center p-4 bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-100">
-        <div className="flex items-center gap-2">
-          <Image src="/souls-favicon.png" alt="Logo" width={24} height={24} className="object-contain" />
-          <h2 className="text-lg font-bold tracking-wide text-[var(--color-accent-blue)]">Soulspectives</h2>
+        <div className="flex items-center gap-3">
+          <Image src="/souls-favicon.png" alt="Logo" width={28} height={28} className="object-contain" />
+          <div className="flex flex-col">
+            <h2 className="text-lg font-bold tracking-wide text-[var(--color-accent-blue)] leading-tight">Soulspectives</h2>
+            <span className="text-[9px] uppercase tracking-widest text-gray-400 font-medium leading-none">Institute</span>
+          </div>
         </div>
         <button onClick={() => setMenuOpen(true)} className="text-gray-600">
           <Menu size={28} />
@@ -54,8 +57,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center gap-3">
-          <Image src="/souls-favicon.png" alt="Logo" width={28} height={28} className="object-contain" />
-          <h2 className="text-xl font-bold tracking-wide text-[var(--color-accent-blue)]">Soulspectives Institute</h2>
+          <Image src="/souls-favicon.png" alt="Logo" width={32} height={32} className="object-contain" />
+          <div className="flex flex-col">
+            <h2 className="text-xl font-bold tracking-wide text-[var(--color-accent-blue)] leading-tight">Soulspectives</h2>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-medium leading-none">Institute</span>
+          </div>
         </div>
 
         {/* Center Nav Items */}
