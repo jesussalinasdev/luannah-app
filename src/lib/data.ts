@@ -1,9 +1,10 @@
 export const products = [
   {
     id: 1,
-    title: 'Serenity Journal',
-    price: '$24.00',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=400',
+    title: 'Resilience, Grace and the Art of Showing Up',
+    description: 'An inspiring story of courage, overcoming trauma, and discovering inner resilience to rebuild self-esteem and live your deepest dreams.',
+    price: '$24.98',
+    image: '/book-1.jpg',
     link: '#'
   },
   {

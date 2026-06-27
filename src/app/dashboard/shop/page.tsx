@@ -28,16 +28,19 @@ export default function ShopView() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
           <div key={product.id} className="glass-panel flex flex-col overflow-hidden">
-            <div className="relative w-full h-56">
+            <div className="relative w-full h-80 shrink-0 bg-white/40 p-4">
               <Image 
                 src={product.image} 
                 alt={product.title} 
                 fill 
-                className="object-cover" 
+                className="object-contain p-2" 
               />
             </div>
             <div className="p-6 flex flex-col flex-1">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
+              {product.description && (
+                <p className="text-gray-500 text-sm mb-4 line-clamp-3 leading-relaxed">{product.description}</p>
+              )}
               <p className="text-[var(--color-accent-blue)] font-bold text-lg mb-6">{product.price}</p>
               
               <button 
