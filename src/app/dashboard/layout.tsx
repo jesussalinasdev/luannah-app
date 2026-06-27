@@ -24,7 +24,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   ];
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen animated-marine-bg relative">
+    <div className="flex flex-col min-h-screen animated-marine-bg relative">
       
       {/* Mobile Header */}
       <div className="md:hidden flex justify-between items-center p-5 bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-100">
@@ -45,40 +45,45 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </div>
       )}
 
-      {/* Desktop Sidebar (hidden on mobile) */}
-      <div className="hidden md:flex flex-col w-64 bg-white border-r border-gray-100 fixed h-screen z-10">
-        <div className="p-8">
-          <h2 className="text-2xl font-bold text-[var(--color-accent-blue)]">Luannah</h2>
+      {/* Desktop Top Navigation (hidden on mobile) */}
+      <div className="hidden md:flex items-center justify-between px-8 py-4 bg-white/80 backdrop-blur-xl sticky top-0 z-40 border-b border-gray-100 shadow-sm">
+        
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <h2 className="text-2xl font-bold tracking-wide text-[var(--color-accent-blue)]">Luannah</h2>
         </div>
-        <div className="flex flex-col flex-1 px-4 gap-2">
+
+        {/* Center Nav Items */}
+        <div className="flex items-center gap-2">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.path;
             return (
-              <Link key={item.name} href={item.path} className={`flex items-center gap-4 p-4 rounded-2xl transition-all relative overflow-hidden ${isActive ? 'text-[var(--color-accent-blue)] font-semibold shadow-sm' : 'text-gray-500 hover:bg-gray-50'}`}>
+              <Link key={item.name} href={item.path} className={`flex items-center gap-2 px-5 py-3 rounded-2xl transition-all relative overflow-hidden ${isActive ? 'text-[var(--color-accent-blue)] font-semibold shadow-sm' : 'text-gray-500 hover:bg-white hover:shadow-sm'}`}>
                 {isActive && (
                   <div className="absolute inset-0 animated-marine-bg opacity-15 -z-10"></div>
                 )}
-                <Icon size={24} className="z-10" />
+                <Icon size={20} className="z-10" />
                 <span className="z-10">{item.name}</span>
               </Link>
             );
           })}
         </div>
-        <div className="p-4 mb-2 flex flex-col gap-2">
-          <Link href="/dashboard/profile" className="flex items-center gap-4 p-4 w-full text-gray-500 hover:bg-[var(--color-accent-teal)]/10 hover:text-[var(--color-accent-teal)] rounded-xl transition-colors">
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <Link href="/dashboard/profile" className="flex items-center justify-center p-3 text-gray-500 hover:bg-[var(--color-accent-teal)]/10 hover:text-[var(--color-accent-teal)] rounded-2xl transition-colors" title="My Profile">
             <User size={24} />
-            <span>My Profile</span>
           </Link>
-          <button onClick={handleLogout} className="flex items-center gap-4 p-4 w-full text-gray-500 hover:bg-red-50 hover:text-red-500 rounded-xl transition-colors">
+          <button onClick={handleLogout} className="flex items-center justify-center p-3 text-gray-500 hover:bg-red-50 hover:text-red-500 rounded-2xl transition-colors" title="Log Out">
             <LogOut size={24} />
-            <span>Log Out</span>
           </button>
         </div>
+
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 md:ml-64 p-4 pb-28 md:pb-8 max-w-6xl w-full mx-auto relative z-0">
+      <div className="flex-1 p-4 pb-28 md:pb-12 max-w-5xl w-full mx-auto relative z-0 md:mt-8">
         {children}
       </div>
 
