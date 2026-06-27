@@ -44,7 +44,7 @@ export default function ShopView() {
               <p className="text-[var(--color-accent-plum)] font-bold text-lg mb-6">{product.price}</p>
               
               <button 
-                className={`mt-auto w-full py-3 rounded-xl text-white font-semibold transition-all ${addedItems[product.id] ? 'bg-green-500 shadow-green-200' : 'bg-gradient-to-r from-[var(--color-accent-pink)] to-[var(--color-accent-plum)] shadow-purple-200'} shadow-lg`}
+                className={`mt-auto ${addedItems[product.id] ? 'w-full py-4 rounded-2xl text-white font-bold bg-green-500 shadow-lg shadow-green-200 transition-all' : 'btn-primary'}`}
                 onClick={() => handleAddToCart(product.id)}
               >
                 {addedItems[product.id] ? 'Added to Cart ✓' : 'Add to Cart'}

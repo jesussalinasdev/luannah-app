@@ -27,7 +27,7 @@
   
   .btn-primary {
     @apply w-full py-4 px-6 rounded-2xl text-white font-bold text-lg transition-transform hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-pink-500/30;
-    background: linear-gradient(135deg, #fcd5ce 0%, #e8c1d5 25%, #f8edeb 50%, #ffecd9 75%, #e2d5e5 100%);
+    background: linear-gradient(135deg, var(--color-accent-pink) 0%, #a0426b 25%, #6a2a53 50%, var(--color-accent-plum) 75%, var(--color-accent-pink) 100%);
     background-size: 300% 300%;
     animation: gradientMove 15s ease-in-out infinite alternate;
   }
