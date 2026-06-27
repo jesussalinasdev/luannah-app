@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Home, Headphones, Brain, ShoppingBag, ShoppingCart, Menu, LogOut, User } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,8 +28,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <div className="flex flex-col min-h-screen animated-marine-bg relative">
       
       {/* Mobile Header */}
-      <div className="md:hidden flex justify-between items-center p-5 bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-100">
-        <h2 className="text-xl font-medium tracking-wide text-[var(--color-accent-blue)]">Luannah</h2>
+      <div className="md:hidden flex justify-between items-center p-4 bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-100">
+        <div className="flex items-center gap-2">
+          <Image src="/souls-favicon.png" alt="Logo" width={24} height={24} className="object-contain" />
+          <h2 className="text-lg font-bold tracking-wide text-[var(--color-accent-blue)]">Soulspectives</h2>
+        </div>
         <button onClick={() => setMenuOpen(true)} className="text-gray-600">
           <Menu size={28} />
         </button>
@@ -49,8 +53,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <div className="hidden md:flex items-center justify-between px-8 py-4 bg-white/80 backdrop-blur-xl sticky top-0 z-40 border-b border-gray-100 shadow-sm">
         
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <h2 className="text-2xl font-bold tracking-wide text-[var(--color-accent-blue)]">Luannah</h2>
+        <div className="flex-shrink-0 flex items-center gap-3">
+          <Image src="/souls-favicon.png" alt="Logo" width={28} height={28} className="object-contain" />
+          <h2 className="text-xl font-bold tracking-wide text-[var(--color-accent-blue)]">Soulspectives Institute</h2>
         </div>
 
         {/* Center Nav Items */}

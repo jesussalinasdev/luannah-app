@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import logoImg from "../../public/logo.png";
+import transparentLogoImg from "../../public/transparent-logo.png";
 
 // Mock Data
 const validUsers = [
@@ -44,9 +44,9 @@ export default function Home() {
   if (showSplash) {
     return (
       <div className="flex items-center justify-center min-h-screen animated-marine-bg absolute inset-0 z-50 animate-fade-out" style={{ animationDelay: '1.8s' }}>
-        <div className="text-center flex flex-col items-center">
-          <h1 className="text-5xl md:text-7xl stylized-text">Luannah Arana</h1>
-        </div>
+          <div className="relative w-72 h-40">
+            <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain drop-shadow-2xl" />
+          </div>
       </div>
     );
   }
@@ -57,10 +57,9 @@ export default function Home() {
         
         {/* Logo and App Name */}
         <div className="flex flex-col items-center justify-center mb-8">
-          <div className="w-24 h-24 relative mb-4">
-            <Image src={logoImg} alt="Luannah Arana Logo" fill className="object-cover" />
+          <div className="w-64 h-32 relative mb-2">
+            <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain" />
           </div>
-          <h1 className="text-3xl font-light tracking-wide text-gray-800">Luannah Arana</h1>
         </div>
 
         <p className="text-gray-500 mb-8 font-medium">Please enter your details to sign in.</p>

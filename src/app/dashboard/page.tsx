@@ -15,7 +15,8 @@ export default function HomeView() {
           />
         </div>
         <h2 className="text-3xl font-bold text-gray-800 tracking-wide">Luannah Arana</h2>
-        <p className="text-gray-500 mt-1">Welcome to your serenity space.</p>
+        <p className="text-[var(--color-accent-blue)] font-semibold mt-1 tracking-widest uppercase text-sm">Founder</p>
+        <p className="text-gray-500 mt-3">Welcome to Soulspectives Institute.</p>
       </div>
 
       {/* About Me */}

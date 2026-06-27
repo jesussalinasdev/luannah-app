@@ -9,11 +9,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Luannah Arana",
+  title: "Soulspectives Institute",
   description: "Your serenity space.",
-  icons: {
-    icon: "/logo.png",
-  },
 };
 
 export default function RootLayout({
