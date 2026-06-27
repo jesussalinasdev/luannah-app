@@ -50,7 +50,7 @@ export default function Home() {
 
   if (showSplash) {
     return (
-      <div className={`flex items-center justify-center min-h-screen bg-white absolute inset-0 z-50 transition-opacity duration-700 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`flex items-center justify-center bg-white fixed inset-0 z-50 transition-opacity duration-700 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
           <div className="relative w-11/12 max-w-3xl h-64 md:h-96 animate-fade-in">
             <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain" priority />
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen animated-marine-bg p-4 relative overflow-hidden animate-fade-in" style={{ animationDuration: '1s' }}>
+    <div className="flex items-center justify-center min-h-[100dvh] animated-marine-bg p-4 relative overflow-hidden animate-fade-in" style={{ animationDuration: '1s' }}>
       <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-10 text-center animate-fade-in relative z-10 border border-gray-100">
         
         {/* Logo and App Name */}
