@@ -1,0 +1,23 @@
+{
+  "name": "Soulspectives Institute",
+  "short_name": "Soulspectives",
+  "description": "Your serenity space and mindfulness community.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2dd4bf",
+  "icons": [
+    {
+      "src": "/souls-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/souls-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

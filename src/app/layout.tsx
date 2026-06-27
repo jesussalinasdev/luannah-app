@@ -11,6 +11,12 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Soulspectives Institute",
   description: "Your serenity space.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Soulspectives",
+  },
 };
 
 export default function RootLayout({
