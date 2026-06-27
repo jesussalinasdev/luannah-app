@@ -23,7 +23,7 @@ export const products = [
     description: 'A deeply relaxing sound healing album designed to balance your chakras and restore inner peace.',
     price: 'Apple Music',
     buttonLabel: 'Listen Now',
-    image: '/apple-music.svg',
+    image: '/chakra-album.png',
     url: 'https://music.apple.com/ca/artist/luella/1459216930'
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     description: 'Immerse yourself in this sound healing album to reconnect with your soul and find your center.',
     price: 'Apple Music',
     buttonLabel: 'Listen Now',
-    image: '/apple-music.svg',
+    image: '/reunited-album.png',
     url: 'https://music.apple.com/ca/album/reunited-the-journey-home/1459217841'
   },
   {
