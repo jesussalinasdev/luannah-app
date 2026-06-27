@@ -55,9 +55,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             const Icon = item.icon;
             const isActive = pathname === item.path;
             return (
-              <Link key={item.name} href={item.path} className={`flex items-center gap-4 p-4 rounded-xl transition-colors ${isActive ? 'bg-[var(--color-accent-teal)]/10 text-[var(--color-accent-teal)] font-semibold' : 'text-gray-500 hover:bg-gray-50'}`}>
-                <Icon size={24} />
-                <span>{item.name}</span>
+              <Link key={item.name} href={item.path} className={`flex items-center gap-4 p-4 rounded-2xl transition-all relative overflow-hidden ${isActive ? 'text-[var(--color-accent-blue)] font-semibold shadow-sm' : 'text-gray-500 hover:bg-gray-50'}`}>
+                {isActive && (
+                  <div className="absolute inset-0 animated-marine-bg opacity-15 -z-10"></div>
+                )}
+                <Icon size={24} className="z-10" />
+                <span className="z-10">{item.name}</span>
               </Link>
             );
           })}
@@ -85,9 +88,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           const Icon = item.icon;
           const isActive = pathname === item.path;
           return (
-            <Link key={item.name} href={item.path} className={`flex flex-col items-center gap-1 p-2 ${isActive ? 'text-[var(--color-accent-teal)]' : 'text-gray-400'}`}>
-              <Icon size={isActive ? 28 : 24} className="transition-all" />
-              <span className="text-[10px] font-medium">{item.name}</span>
+            <Link key={item.name} href={item.path} className={`flex flex-col items-center justify-center gap-1 w-16 h-16 rounded-2xl transition-all relative overflow-hidden ${isActive ? 'text-[var(--color-accent-blue)] shadow-sm' : 'text-gray-400'}`}>
+              {isActive && (
+                <div className="absolute inset-0 animated-marine-bg opacity-20 -z-10"></div>
+              )}
+              <Icon size={isActive ? 26 : 24} className="transition-all z-10" />
+              <span className="text-[10px] font-medium z-10">{item.name}</span>
             </Link>
           );
         })}
