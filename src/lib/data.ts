@@ -14,6 +14,7 @@ export const products = [
     price: '$9.99',
     image: '/book-2.jpg',
     link: '#'
+  }
 ];
 
 export const podcasts = [
