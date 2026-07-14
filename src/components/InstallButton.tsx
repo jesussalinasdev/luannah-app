@@ -14,9 +14,15 @@ export default function InstallButton() {
     const isIOSDevice = /iPad|iPhone|iPod/.test(ua) && !(window as any).MSStream;
     setIsIOS(isIOSDevice);
 
-    // Listen for beforeinstallprompt
+    // Check if prompt was caught early by layout.tsx script
+    if ((window as any).pwaDeferredPrompt) {
+      setDeferredPrompt((window as any).pwaDeferredPrompt);
+    }
+
+    // Listen for beforeinstallprompt in case it fires later
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
+      (window as any).pwaDeferredPrompt = e;
       setDeferredPrompt(e);
     };
 
@@ -33,17 +39,20 @@ export default function InstallButton() {
       return;
     }
 
-    if (!deferredPrompt) {
+    const prompt = deferredPrompt || (window as any).pwaDeferredPrompt;
+
+    if (!prompt) {
       // If prompt isn't available, maybe they already installed it, or browser doesn't support it.
       // We show a simple alert as fallback so the button does something visibly.
       alert("App installation is either not supported in this browser, or it's already installed on your device.");
       return;
     }
 
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
+    prompt.prompt();
+    const { outcome } = await prompt.userChoice;
     if (outcome === "accepted") {
       setDeferredPrompt(null);
+      (window as any).pwaDeferredPrompt = null;
     }
   };
 
