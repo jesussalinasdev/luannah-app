@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import transparentLogoImg from "../../public/transparent-logo.png";
+import InstallButton from "@/components/InstallButton";
 
 // Mock Data
 const validUsers = [
@@ -92,6 +93,17 @@ export default function Home() {
           {error && <div className="text-red-500 bg-red-50/80 backdrop-blur-sm p-3 rounded-xl text-sm border border-red-200">{error}</div>}
           
           <button type="submit" className="btn-primary mt-4">Sign In</button>
+          
+          {/* USPTO Download App Button */}
+          <div className="relative mt-2">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-2 bg-white text-gray-500">or</span>
+            </div>
+          </div>
+          <InstallButton />
         </form>
       </div>
     </div>
