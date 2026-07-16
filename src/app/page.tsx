@@ -61,18 +61,18 @@ export default function Home() {
 
   return (
     <div className="flex items-center justify-center min-h-[100dvh] animated-brand-bg p-4 relative overflow-hidden animate-fade-in" style={{ animationDuration: '1s' }}>
-      <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-10 text-center animate-fade-in relative z-10 border border-gray-100">
+      <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-6 md:p-10 text-center animate-fade-in relative z-10 border border-gray-100">
         
         {/* Logo and App Name */}
-        <div className="flex flex-col items-center justify-center mb-6">
-          <div className="w-72 h-36 relative mb-2">
+        <div className="flex flex-col items-center justify-center mb-4 md:mb-6">
+          <div className="w-64 h-24 md:w-72 md:h-36 relative mb-2">
             <Image src={transparentLogoImg} alt="Soulspectives Institute" fill className="object-contain" />
           </div>
         </div>
 
-        <p className="text-gray-500 mb-8 font-medium">Please enter your details to sign in.</p>
+        <p className="text-gray-500 mb-6 md:mb-8 font-medium text-sm md:text-base">Please enter your details to sign in.</p>
 
-        <form onSubmit={handleLogin} className="flex flex-col gap-5">
+        <form onSubmit={handleLogin} className="flex flex-col gap-4 md:gap-5">
           <input 
             type="email" 
             placeholder="Email"
