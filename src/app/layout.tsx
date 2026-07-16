@@ -26,6 +26,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').catch(function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                  });
+                });
+              }
+              window.pwaDeferredPrompt = null;
+              window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                window.pwaDeferredPrompt = e;
+              });
+            `,
+          }}
+        />
+      </head>
       <body className={`${outfit.variable} antialiased`}>
         {children}
       </body>
