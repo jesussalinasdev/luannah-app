@@ -67,6 +67,11 @@ export default function InstallButton() {
         Download App
       </button>
 
+      {/* Trademark Legal Text */}
+      <p className="mt-2 text-[10px] leading-tight text-gray-400 text-center px-2 font-light">
+        Downloadable computer application software for mobile phones, portable media players, handheld computers, namely, software featuring coaching in meditation.
+      </p>
+
       {/* iOS Instructions Modal */}
       {showIOSModal && (
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in" style={{ animationDuration: '0.3s' }}>
