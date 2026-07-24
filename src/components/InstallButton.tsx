@@ -69,7 +69,7 @@ export default function InstallButton() {
 
       {/* Trademark Legal Text */}
       <p className="mt-2 text-[10px] leading-tight text-gray-400 text-center px-2 font-light">
-        Downloadable computer application software for mobile phones, portable media players, handheld computers, namely, software featuring coaching in meditation.
+        Downloadable web app and software for mobile devices and computers, providing access to books, videos, and masterclasses for meditation and wellness coaching.
       </p>
 
       {/* iOS Instructions Modal */}
